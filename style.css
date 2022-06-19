@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200&display=swap");
+
+:root {
+  /* --primary-color: #fc4b41; */
+  --logo: #cb5e18;
+  --primary-color: #b1231f;
+  --white: #f6f7ef;
+  --black: #2f0701;
+  --green: #64862d;
+  --yellow: #fee76b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Logo  */
+/* font-family: 'Cinzel', serif; */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 2rem;
+  color: var(--black);
+  background: url(/dist/img/home.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  /* background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(255, 255, 255, 0.5); */
+  /* background-color: #f8958f; */
+  background-color: rgba(47, 7, 1, 0.8);
+  padding: 1rem;
+  padding-right: 6.4rem;
+}
+
+.logo-box {
+  /* background-color: var(--white); */
+  padding: 0 3rem;
+  /* transform: skewY(-5deg); */
+}
+
+.logo {
+  font-family: "Cinzel", serif;
+  font-weight: 400;
+  font-size: 4.8rem;
+  color: var(--logo);
+  /* text-shadow: 0 2px 5px rgba(255, 255, 255, 0.5); */
+}
+
+.links {
+  display: flex;
+  gap: 4.8rem;
+  /* margin-right: 10rem; */
+}
+
+.links li {
+  list-style-type: none;
+}
+
+.link {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 2.4rem;
+}
+
+.link:hover {
+  color: var(--logo);
+}
+
+h1 {
+  /* color: var(--white); */
+  font-size: 8rem;
+  font-weight: 900;
+  /* text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7); */
+  text-align: center;
+}
+
+h1 strong {
+  color: var(--primary-color);
+}
+
+#container {
+  z-index: 99;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  height: 100%;
+  padding: 5rem 3rem;
+  max-width: 100rem;
+  margin: 4.8rem auto;
+  /* clip-path: polygon(
+    0 21%,
+    11% 0,
+    89% 0,
+    100% 21%,
+    100% 79%,
+    89% 100%,
+    11% 100%,
+    0 79%
+  ); */
+}
