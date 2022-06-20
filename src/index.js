@@ -1,24 +1,39 @@
-console.log("hello pluto");
+import { showHomePage } from "./home";
 
+//--------Open and Close Nav-------\\
 const btnOpenMenu = document.querySelector(".icon--open");
 const btnCloseMenu = document.querySelector(".icon--close");
-const btnMenu = document.querySelector(".menu");
+
+function showMenu() {
+  const menu = document.querySelector(".links");
+
+  btnOpenMenu.style.visibility = "hidden";
+  btnCloseMenu.style.visibility = "visible";
+  menu.style.transform = "translateX(0)";
+}
+
+function hideMenu() {
+  const menu = document.querySelector(".links");
+
+  btnOpenMenu.style.visibility = "visible";
+  btnCloseMenu.style.visibility = "hidden";
+  menu.style.transform = "translateX(100%)";
+}
 
 btnOpenMenu.addEventListener("click", showMenu);
 btnCloseMenu.addEventListener("click", hideMenu);
 
-function showMenu() {
-  const links = document.querySelector(".links");
+//--------Show pages-------\\
+const links = document.querySelectorAll(".link");
+const home = document.querySelector(".link--home");
+const menu = document.querySelector(".link--menu");
+const contact = document.querySelector(".link--contact");
 
-  btnOpenMenu.style.visibility = "hidden";
-  btnCloseMenu.style.visibility = "visible";
-  links.style.transform = "translateX(0)";
-}
-
-function hideMenu() {
-  const links = document.querySelector(".links");
-
-  btnOpenMenu.style.visibility = "visible";
-  btnCloseMenu.style.visibility = "hidden";
-  links.style.transform = "translateX(100%)";
-}
+links.forEach((link) => {
+  console.log(link);
+  if (
+    link.classList.contains("active") &&
+    link.classList.contains("link--home")
+  )
+    showHomePage();
+});
