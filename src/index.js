@@ -30,7 +30,6 @@ const menu = document.querySelector(".link--menu");
 const contact = document.querySelector(".link--contact");
 
 links.forEach((link) => {
-  console.log(link);
   if (
     link.classList.contains("active") &&
     link.classList.contains("link--home")
