@@ -27,8 +27,6 @@ btnCloseMenu.addEventListener("click", hideMenu);
 
 //--------Show pages-------\\
 const links = document.querySelectorAll(".link");
-const home = document.querySelector(".link--home");
-const contact = document.querySelector(".link--contact");
 
 links.forEach((link) => {
   link.addEventListener("click", function (e) {
@@ -57,6 +55,5 @@ export function removeActive() {
   links.forEach((link) => link.classList.remove("active"));
 }
 
+//Init
 showHomePage();
-
-console.log("sdafadf");
