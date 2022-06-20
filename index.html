@@ -20,16 +20,38 @@
         <li><a href="#" class="link">Menu</a></li>
         <li><a href="#" class="link">Contact</a></li>
       </ul>
+      <button class="menu">
+        <ion-icon class="icon--menu icon--open" name="menu-outline"></ion-icon>
+        <ion-icon
+          class="icon--menu icon--close"
+          name="close-outline"
+        ></ion-icon>
+      </button>
     </nav>
 
     <div id="container">
-      <h1>The best <strong>Pizza and Beer</strong> in town!</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos iusto
-        voluptatibus adipisci minima quo, inventore assumenda! Aliquid nemo
-        explicabo similique temporibus amet fugit earum alias nulla officiis
-        quam? Architecto, ipsam.
-      </p>
+      <div class="content--home">
+        <h1 class="headline">
+          The best <strong>Pizza and Beer</strong> in town!
+        </h1>
+        <button class="btn--order">Order now!</button>
+        <div class="details">
+          <div class="schedule">
+            <ion-icon class="icon--time" name="time-outline"></ion-icon>
+            <p class="hours">Mon to Fri: 10:00am-8pm</p>
+            <p class="hours">Sat to Sun: 10:00am-10pm</p>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
