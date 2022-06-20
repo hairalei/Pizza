@@ -1,5 +1,8 @@
+import { showMenuPage } from "./menu";
+import { removeActive } from ".";
+
 export function showHomePage() {
-  const body = document.querySelector("body");
+  const body = document.querySelector(".overlay");
 
   const container = document.querySelector("#container");
 
@@ -22,4 +25,15 @@ export function showHomePage() {
   container.innerHTML = markup;
 
   body.style.background = `url(/dist/img/home.jpg) no-repeat`;
+  body.style.backgroundSize = `cover`;
+  body.style.backgroundPosition = `center`;
+
+  const menu = document.querySelector(".link--menu");
+
+  const btnOrder = document.querySelector(".btn--order");
+  btnOrder.addEventListener("click", () => {
+    removeActive();
+    menu.classList.add("active");
+    showMenuPage();
+  });
 }

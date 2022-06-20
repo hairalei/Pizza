@@ -1,4 +1,5 @@
 import { showHomePage } from "./home";
+import { showMenuPage } from "./menu";
 
 //--------Open and Close Nav-------\\
 const btnOpenMenu = document.querySelector(".icon--open");
@@ -26,13 +27,30 @@ btnCloseMenu.addEventListener("click", hideMenu);
 //--------Show pages-------\\
 const links = document.querySelectorAll(".link");
 const home = document.querySelector(".link--home");
-const menu = document.querySelector(".link--menu");
 const contact = document.querySelector(".link--contact");
 
 links.forEach((link) => {
-  if (
-    link.classList.contains("active") &&
-    link.classList.contains("link--home")
-  )
-    showHomePage();
+  link.addEventListener("click", function (e) {
+    removeActive();
+    this.classList.add("active");
+
+    if (
+      link.classList.contains("active") &&
+      link.classList.contains("link--home")
+    )
+      showHomePage();
+    else if (
+      link.classList.contains("active") &&
+      link.classList.contains("link--menu")
+    )
+      showMenuPage();
+  });
 });
+
+export function removeActive() {
+  links.forEach((link) => link.classList.remove("active"));
+}
+
+showHomePage();
+
+console.log("sdafadf");
