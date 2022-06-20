@@ -1,5 +1,8 @@
 export function showHomePage() {
+  const body = document.querySelector("body");
+
   const container = document.querySelector("#container");
+
   const markup = `
     <div class="content--home">
         <h1 class="headline">
@@ -17,4 +20,6 @@ export function showHomePage() {
     `;
 
   container.innerHTML = markup;
+
+  body.style.background = `url(/dist/img/home.jpg) no-repeat`;
 }

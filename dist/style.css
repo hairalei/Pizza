@@ -25,11 +25,13 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 2rem;
   color: var(--white);
-  background: url(/dist/img/home.jpg) no-repeat;
+  background: url(/dist/img/menu.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow-wrap: break-word;
 
   /* display: flex;
   flex-direction: column;
@@ -45,7 +47,7 @@ body::after {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: -2;
   width: 100%;
   height: 100%;
@@ -153,7 +155,7 @@ h1.headline strong {
   width: 100%;
   height: 100%;
   padding: 5rem 3rem;
-  max-width: 100rem;
+  max-width: 90vw;
   min-height: 55rem;
   margin: 0 auto;
 
@@ -234,6 +236,17 @@ button.btn--order:active {
   .icon--open {
     visibility: visible;
   }
+
+  .icon--menu {
+    right: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pizza {
+    flex-direction: column;
+    align-items: baseline;
+  }
 }
 
 @media (max-width: 25em) {
@@ -241,13 +254,18 @@ button.btn--order:active {
     font-size: 2.4rem;
   }
 
+  .links {
+    top: 0;
+  }
+
   .icon--menu {
     font-size: 3.2rem;
     top: -1.5rem;
   }
 
-  .container {
+  #container {
     max-width: 100%;
+    padding: 0;
   }
 
   h1.headline {
@@ -269,6 +287,54 @@ button.btn--order:active {
   .hours {
     font-size: 1.4rem;
   }
+
+  li.pizza {
+    padding: 1rem;
+  }
 }
 
 /************* MENU SECTION  *************/
+.menu__heading {
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.6), 0 2px 5px rgba(0, 0, 0, 1);
+}
+.menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.pizza {
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  flex: 1;
+}
+
+.pizza_details {
+  display: flex;
+  flex-direction: column;
+  width: 28rem;
+  margin-right: 0.5rem;
+}
+
+.pizza_details span {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.pizza_details small {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+.pizza__price {
+  font-size: 1.8rem;
+}
