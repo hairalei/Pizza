@@ -1,1 +1,1 @@
-console.log("hello pluto");
+(()=>{console.log("hello pluto");const e=document.querySelector(".icon--open"),t=document.querySelector(".icon--close");document.querySelector(".menu"),e.addEventListener("click",(function(){const i=document.querySelector(".links");e.style.visibility="hidden",t.style.visibility="visible",i.style.transform="translateX(0)"})),t.addEventListener("click",(function(){const i=document.querySelector(".links");e.style.visibility="visible",t.style.visibility="hidden",i.style.transform="translateX(100%)"}))})();
