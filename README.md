@@ -7,3 +7,5 @@ https://hairalei.github.io/PizzaAndBeer/
 - HTML, CSS
 - JavaScript
 - Webpack
+
+![PizzaAndBeer](dist/img/Restaurant.gif)
