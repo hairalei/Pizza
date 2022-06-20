@@ -68,13 +68,12 @@ a:focus-visible {
 /************* NAV SECTION  *************/
 .nav {
   display: flex;
-  justify-content: space-between;
   align-items: baseline;
   background-color: rgba(47, 7, 1, 0.8);
   padding: 1rem;
-  padding-right: 6.4rem;
   position: relative;
   width: 100vw;
+  position: relative;
 }
 
 .logo-box {
@@ -91,6 +90,11 @@ a:focus-visible {
 .links {
   display: flex;
   gap: 4.8rem;
+
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
 }
 
 .links li {
@@ -111,8 +115,6 @@ button.menu {
   position: absolute;
   top: 50%;
   right: 0;
-  transform: translateY(-50%);
-  position: relative;
 }
 
 .icon--open,
@@ -121,8 +123,8 @@ button.menu {
   color: var(--white);
   cursor: pointer;
   position: absolute;
-  top: -3.6rem;
-  right: -1.2rem;
+  top: -2.4rem;
+  right: 1rem;
   visibility: hidden;
 }
 
@@ -194,7 +196,7 @@ button.btn--order:active {
   text-shadow: 0 0 15px rgba(0, 0, 0, 0.6), 0 2px 5px rgba(0, 0, 0, 1);
 }
 
-@media (max-width: 70em) {
+@media (max-width: 900px) {
   .nav {
     padding: 0.5rem;
     padding-right: 2.4rem;
@@ -235,7 +237,7 @@ button.btn--order:active {
 
   .icon--menu {
     font-size: 3.2rem;
-    top: -2.5rem;
+    top: -1.5rem;
   }
 
   .container {
