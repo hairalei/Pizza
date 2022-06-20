@@ -25,13 +25,24 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 2rem;
   color: var(--white);
-  background: url(/dist/img/menu.jpg) no-repeat;
-  background-size: cover;
-  background-position: center;
+}
+
+.overlay {
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  /* background: url(/dist/img/menu.jpg) no-repeat; */
+  /* background-size: cover;
+  background-position: center; */
   min-height: 100vh;
+  max-height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
   overflow-wrap: break-word;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
   /* display: flex;
   flex-direction: column;
@@ -40,14 +51,14 @@ body {
   z-index: -1;
 }
 
-body::after {
+.overlay::after {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: -2;
   width: 100%;
   height: 100%;
@@ -153,7 +164,6 @@ h1.headline strong {
 #container {
   z-index: 99;
   width: 100%;
-  height: 100%;
   padding: 5rem 3rem;
   max-width: 90vw;
   min-height: 55rem;
