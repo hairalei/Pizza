@@ -1,5 +1,6 @@
 import { showHomePage } from "./home";
 import { showMenuPage } from "./menu";
+import { showContactPage } from "./contact";
 
 //--------Open and Close Nav-------\\
 const btnOpenMenu = document.querySelector(".icon--open");
@@ -44,6 +45,11 @@ links.forEach((link) => {
       link.classList.contains("link--menu")
     )
       showMenuPage();
+    else if (
+      link.classList.contains("active") &&
+      link.classList.contains("link--contact")
+    )
+      showContactPage();
   });
 });
 
